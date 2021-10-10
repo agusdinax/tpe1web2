@@ -6,8 +6,8 @@
         <div class="col-md-4">
             <h2>Log In</h2>
             <form class="form-alta" action="verify" method="post">
-                <input placeholder="email" type="text" name="email" id="email" required>
-                <input placeholder="password" type="password" name="password" id="password" required>
+                <input placeholder="email" type="text" name="email" id="mail" required>
+                <input placeholder="password" type="password" name="clave" id="clave" required>
                 <input type="submit" class="btn btn-primary" value="Login">
             </form>
         </div>

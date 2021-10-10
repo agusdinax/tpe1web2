@@ -1,5 +1,6 @@
 <?php
 require_once "Controller/LoginController.php";
+require_once "Controller/TablaController.php";
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -13,7 +14,7 @@ if (!empty($_GET['action'])) {
 
 $params = explode('/', $action);
 
-$taskController = new TaskController();
+$tablaController = new TablaController();
 $loginController = new LoginController();
 
 
@@ -22,30 +23,39 @@ switch ($params[0]) {
     case 'login': 
         $loginController->login(); 
         break;
-    case 'logout': 
-        $loginController->logout(); 
-        break;
+    // case 'logout': 
+    //     $loginController->logout(); 
+    //     break;
     case 'verify': 
         $loginController->verificarLogin(); 
         break;
     case 'home': 
-        $taskController->showHome(); 
+       $tablaController->mostrarJuegos();
         break;
-    case 'createTask': 
-        $taskController->createTask(); 
+    case 'admin':
+        $tablaController->mostrarJuegosAdm();
+        break; 
+    case 'logout':
+        $loginController->logout();
+        break; 
+    case 'agregarJuego': 
+        $tablaController->agregarJuego(); 
         break;
-    case 'deleteTask': 
-        $taskController->deleteTask($params[1]); 
+    case 'juego':
+        $tablaController->mostrarJuego($params[1]);
         break;
-    case 'updateTask': 
-        $taskController->updateTask($params[1]); 
-        break;
-    case 'viewTask': 
-        $taskController->viewTask($params[1]); 
-        break;
-    default: 
-        echo('404 Page not found'); 
-        break;
+    // case 'deleteTask': 
+    //     $taskController->deleteTask($params[1]); 
+    //     break;
+    // case 'updateTask': 
+    //     $taskController->updateTask($params[1]); 
+    //     break;
+    // case 'viewTask': 
+    //     $taskController->viewTask($params[1]); 
+    //     break;
+    // default: 
+    //     echo('404 Page not found'); 
+    //     break;
 }
 
 ?>
