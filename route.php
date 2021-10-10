@@ -23,9 +23,6 @@ switch ($params[0]) {
     case 'login': 
         $loginController->login(); 
         break;
-    // case 'logout': 
-    //     $loginController->logout(); 
-    //     break;
     case 'verify': 
         $loginController->verificarLogin(); 
         break;
@@ -44,9 +41,9 @@ switch ($params[0]) {
     case 'juego':
         $tablaController->mostrarJuego($params[1]);
         break;
-    // case 'deleteTask': 
-    //     $taskController->deleteTask($params[1]); 
-    //     break;
+    case 'borrarJuego': 
+        $tablaController->eliminarJuego($params[1]); 
+        break;
     // case 'updateTask': 
     //     $taskController->updateTask($params[1]); 
     //     break;

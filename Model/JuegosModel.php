@@ -24,16 +24,14 @@ class JuegosModel{
         $sentencia->execute(array($nombre, $precio, $plataforma, $genero));
     }
 
-
-
-
-
-
-
-    function deleteTaskFromDB($id){
-        $sentencia = $this->db->prepare("DELETE FROM tareas WHERE id_tarea=?");
+    function deleteJuegoFromDB($id){
+        $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juego=?");
         $sentencia->execute(array($id));
     }
+
+
+
+    
 
     function updateTaskFromDB($id){
         $sentencia = $this->db->prepare("UPDATE tareas SET finalizada=1 WHERE id_tarea=?");

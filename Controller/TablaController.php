@@ -37,19 +37,10 @@ class TablaController{
         $this->view->showAdmLocation();
     }
 
-
-
-
-
-
-
-
-    
-    function deleteTask($id){
+    function eliminarJuego($id){
         $this->authHelper->checkLoggedIn();
-
-        $this->model->deleteTaskFromDB($id);
-        $this->view->showHomeLocation();
+        $this->model->deleteJuegoFromDB($id);
+        $this->view->showAdmLocation();
     }
 
     function updateTask($id){

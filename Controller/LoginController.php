@@ -1,6 +1,6 @@
 <?php
 require_once "./Model/UserModel.php";
-require_once "./View/VistaLogin.php";
+require_once "./View/LoginView.php";
 
 class LoginController {
 
@@ -9,12 +9,13 @@ class LoginController {
 
     function __construct(){
         $this->model = new UserModel();
-        $this->view = new VistaLogin();
+        $this->view = new LoginView();
     }
 
     function logout(){
         session_start();
         session_destroy();
+        //no muestra el cartel de deslogueo al salir
         $this->view->mostrarLogin("Te deslogueaste!");
     }
 
@@ -25,24 +26,20 @@ class LoginController {
     function verificarLogin(){
         if (!empty($_POST['email']) && !empty($_POST['clave'])) {
             $email = $_POST['email'];
-            $password = $_POST['clave'];
+            $clave = $_POST['clave'];
      
-            // Obtengo el usuario de la base de datos
+            // VIENE EL USUARIO DE LA BASE DE DATOS
             $user = $this->model->obtenerUsuario($email);
-             echo $user->clave;
-             echo $user->email;
-            // Si el usuario existe y las contraseñas coinciden
-            //////FALTA AGREGAR EL HASHEO
+        
+            //FALTA AGREGAR EL HASHEO DEL LOGIN
             if ($user && $user->clave) {
-
                 session_start();
                 $_SESSION["email"] = $email;
-                
+            //LOGRA ENTRAR Y LO REDIRIGE A LA PAGINA HOME DEL ADMIN 
                 $this->view->showHome();
             } else {
                 $this->view->mostrarLogin("Acceso denegado");
             }
         }
     }
-
 }

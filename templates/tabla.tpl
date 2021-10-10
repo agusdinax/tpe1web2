@@ -1,6 +1,16 @@
 {include file='templates/header.tpl'}
-<button type="button" class="btn btn-primary">LOGIN</button>
-<h2>TABLA GAMES</h2>
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Juegos TUDAI</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="home">Home</a>
+        <a href="login" class="btn btn-success">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-lg">
+<h2>NUESTROS JUEGOS RECOMENDADOS</h2>
+<div class="table-responsive">
 <table class="table">
   <thead>
     <tr>
@@ -23,7 +33,7 @@
   {/foreach}
   </tbody>
 </table>
-
-
+</div>
+</div>
 
 {include file='templates/footer.tpl'}
