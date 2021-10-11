@@ -35,7 +35,7 @@ class JuegosModel{
   //PODER EDITAR LA TABLA
     function act_juego($nombre, $precio, $plataforma, $genero, $id_juego)
     {
-        $sentencia = $this->db->prepare("UPDATE mueble SET nombre = ?, precio = ?, plataforma = ?, genero = ? WHERE id_mueble=?");
+        $sentencia = $this->db->prepare("UPDATE mueble SET nombre = ?, precio = ?, plataforma = ?, genero = ? WHERE id_juego=?");
         $sentencia->execute(array($id_juego));
     }
     // function updateTaskFromDB($id){
