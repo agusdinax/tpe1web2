@@ -29,7 +29,7 @@ switch ($params[0]) {
         $loginController->verificarLogin(); 
         break;
     case 'home': 
-       $tablaController->mostrarJuegos();
+        $tablaController->mostrarJuegos();
         break;
     case 'admin':
         $tablaController->mostrarJuegosAdm();

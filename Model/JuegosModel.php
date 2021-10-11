@@ -25,15 +25,19 @@ class JuegosModel{
         $sentencia->execute(array($nombre, $precio, $plataforma, $genero));
     }
 //NO BORRA XD
-    function deleteJuegoFromDB($id){
+    function deleteJuegoFromDB($id_juego){
         $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juego=?");
-        $sentencia->execute(array($id));
+        $sentencia->execute(array($id_juego));
     }
-
-
+    
 
     
   //PODER EDITAR LA TABLA
+    function act_juego($nombre, $precio, $plataforma, $genero, $id_juego)
+    {
+        $sentencia = $this->db->prepare("UPDATE mueble SET nombre = ?, precio = ?, plataforma = ?, genero = ? WHERE id_mueble=?");
+        $sentencia->execute(array($id_juego));
+    }
     // function updateTaskFromDB($id){
     //     $sentencia = $this->db->prepare("UPDATE tareas SET finalizada=1 WHERE id_tarea=?");
     //     $sentencia->execute(array($id));

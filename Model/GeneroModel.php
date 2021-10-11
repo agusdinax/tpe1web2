@@ -8,14 +8,14 @@ class GeneroModel{
     }
 
     function obtenerGeneros(){
-        $sentencia = $this->db->prepare( "select * from genero");
+        $sentencia = $this->db->prepare( "SELECT * from genero");
         $sentencia->execute();
         $generos = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $generos;
     } 
 
     function obtenerGenero($id){
-        $sentencia = $this->db->prepare( "select * from genero WHERE id_genero=?");
+        $sentencia = $this->db->prepare( "SELECT * from genero WHERE id_genero=?");
         $sentencia->execute(array($id));
         $genero = $sentencia->fetch(PDO::FETCH_OBJ);
         return $genero;
@@ -25,16 +25,22 @@ class GeneroModel{
         $sentencia = $this->db->prepare("INSERT INTO genero(id_genero, nombre, descripcion) VALUES(?, ?, ?)");
         $sentencia->execute(array($nombre, $descripcion));
     }
+    
 //NO BORRA XD
-    function deleteGeneroFromDB($id){
+    function deleteGeneroFromDB($id_genero){
         $sentencia = $this->db->prepare("DELETE FROM genero WHERE id_genero=?");
-        $sentencia->execute(array($id));
+        $sentencia->execute(array($id_genero));
     }
 
 
 
     
   //PODER EDITAR LA TABLA
+    function act_genero($nombre, $descripcion, $id_genero)
+    {
+        $sentencia = $this->db->prepare("UPDATE genero SET nombre = ?, descripcion = ? WHERE id_genero=?");
+        $sentencia->execute(array($id_genero));
+    }
     // function updateTaskFromDB($id){
     //     $sentencia = $this->db->prepare("UPDATE tareas SET finalizada=1 WHERE id_tarea=?");
     //     $sentencia->execute(array($id));
