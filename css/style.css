@@ -1,27 +1,44 @@
-html, body {
-  height: 100%;
-  background-color: #FFB300;
+.topnav a:hover {
+  border-bottom: 3px solid red;
 }
-
-.as-full {
+.banner {
+  position: relative;
+  z-index: -1000;
+}
+.banner:before {
+  content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  top: 0;
 }
-.form-control {
-  padding-left: 30px;
-  padding-right: 30px;
+.banner--img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
-/*
-.form-control + .fa {
+.banner--content {
+  width: 90%;
+  font-size: 3em;
+  color: whitesmoke;
+  text-align: center;
   position: absolute;
-  left: 0;
-  padding: 0px 30px;
-}*/
+  z-index: 1500;
+  top: 60%;
+  left: 50%;
+  font-weight: 800;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: 'Courier New', Courier, monospace;
+}
+.banner--content:hover{
+  color: #7a0606;
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.main--title{
+  font-family: 'Courier New', Courier, monospace;
 
-.iconinput {
-    position: relative;
-    z-index: 1;
-    left: 10px;
-    top: -31px;
-    width: 0;
 }

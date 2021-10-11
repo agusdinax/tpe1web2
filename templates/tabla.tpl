@@ -1,14 +1,42 @@
 {include file='templates/header.tpl'}
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Juegos TUDAI</a>
-      <div class="navbar-nav">
-        <a class="nav-link" href="home">Home</a>
-        <a href="login" class="btn btn-success">Login</a>
-      </div>
-    </div>
-  </div>
-</nav>
-<div class="container-lg">
+<!--NAVEGACION PARA EL VISITANTE-->
+	<nav class="container navbar navbar-expand-xl navbar-light bg-warning ">
+        <a class="navbar-brand" href="home"><i class="fas fa-gamepad"></i>Juegos TUDAI<i class="fas fa-gamepad"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Juegos</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Generos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-success text-white" type="button" href="login" >Registrarse</a>
+                </li>
+            </ul>
+        </div>
+  </nav>
+
+<!-------------SECTION BANNER-MENU------------------>
+<section class="mt-1 pt-4 text-center bg-danger">
+  <div class="container-fluid mt-1">
+      <h2 class="main--title text-light mt-3"> <i class="fas fa-gamepad"></i>Bienvenido a nuestro ranking de Juegos <i class="fas fa-gamepad"></i></h2>
+      <p class="main--txt text-light p-5">👉En nuestra pagina web podras ver un ranking de los mejores juegos del mercado!!
+      </br>🛵Tambien podras buscar juegos por genero y elegir el que más te gusta!!
+</p>
+ <button type="button" target="_blank" href="genero"class="pb-2 btn btn-dark "><i class="fas fa-motorcycle"></i>Buscar por Genero
+              <i class="fas fa-motorcycle"></i></button>
+</div>
+</section>
+
+<div class="mt-4 container-lg">
 <h2>NUESTROS JUEGOS RECOMENDADOS</h2>
 <div class="table-responsive">
 <table class="table">
