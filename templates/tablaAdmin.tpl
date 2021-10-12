@@ -16,7 +16,7 @@
                     <a class="nav-link" href="home">Vista Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Generos</a>
+                    <a class="nav-link" href="listaGeneros">Generos</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Juegos</a>
@@ -27,6 +27,27 @@
             </ul>
         </div>
   </nav>
+<!--CARDS PARA ELEGIR ACCIONES-->
+<div class="mt-4 row container">
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">TABLA GENERO</h5>
+        <p class="card-text">Desde aquí como administrador, podrás CREAR NUEVOS GENEROS, EDITAR GENEROS EXISTENTE Y BORRAR GENEROS</p>
+        <a href="ABMGeneros" class="btn btn-primary">Administrar Generos</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">TABLA JUEGOS</h5>
+        <p class="card-text">Desde aquí como administrador, podrás CREAR NUEVOS GENEROS, EDITAR GENEROS EXISTENTE Y BORRAR GENEROS</p>
+        <a href="#" class="btn btn-primary">Administrar Juegos</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--FORM PARA REGISTRAR NUEVO JUEGO-->
 <div class="container">
@@ -55,26 +76,8 @@
     </div>
   </form>
 </div>
-
-<!--FORM PARA REGISTRAR NUEVO GENERO-->
-<div class="container">
-  <form action="agregarJuego" method="post">
-    <div class="modal-header">
-      <h5 class="modal-title">Registrar Nuevo Genero</h5>
-    </div>
-    <div class="modal-body">
-      <div class="form-row">
-        <div class="col mb-3">
-          <input class="form-control" placeholder="Nombre del Genero" type="text" name="inputGenero">
-        </div>
-        <div class="col mb-3">
-          <input class="form-control" placeholder="Coloque Descripcion del Genero" type="text" name="descripcionGenero">
-        </div>
-    <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">Crear</button>
-    </div>
-  </form>
 </div>
+
 
 <!--MUESTRA TABLA CON LA LISTA DE JUEGOS-->
 <div class="container-lg">

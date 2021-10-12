@@ -1,4 +1,5 @@
 {include file='templates/header.tpl'}
+
 <!--NAVEGACION PARA EL VISITANTE-->
 	<nav class="container navbar navbar-expand-xl navbar-light bg-warning ">
         <a class="navbar-brand" href="home"><i class="fas fa-gamepad"></i>Juegos TUDAI<i class="fas fa-gamepad"></i></a>
@@ -12,7 +13,7 @@
                     <a class="nav-link" href="#">Juegos</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Generos</a>
+                    <a class="nav-link" href="listaGeneros">Generos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
@@ -27,11 +28,11 @@
 <!-------------SECTION BANNER-MENU------------------>
 <section class="mt-1 pt-4 text-center bg-danger">
   <div class="container-fluid mt-1">
-      <h2 class="main--title text-light mt-3"> <i class="fas fa-gamepad"></i>Bienvenido a nuestro ranking de Juegos <i class="fas fa-gamepad"></i></h2>
+      <h2 class="main--title text-light mt-3"> <i class="fas fa-gamepad"></i>¡Bienvenido a nuestro ranking de los Mejores Juegos! <i class="fas fa-gamepad"></i></h2>
       <p class="main--txt text-light p-5">👉En nuestra pagina web podras ver un ranking de los mejores juegos del mercado!!
-      </br>🛵Tambien podras buscar juegos por genero y elegir el que más te gusta!!
+      </br>🛵Tambien podras buscar juegos por genero y elegir el que más te guste!!
 </p>
- <button type="button" target="_blank" href="genero"class="pb-2 btn btn-dark "><i class="fas fa-motorcycle"></i>Buscar por Genero
+ <button type="button" href="listaGeneros"class="pb-2 btn btn-dark "><i class="fas fa-motorcycle"></i>Buscar por Genero
               <i class="fas fa-motorcycle"></i></button>
 </div>
 </section>

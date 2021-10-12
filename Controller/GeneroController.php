@@ -32,7 +32,6 @@ class GeneroController{
     }
     //CREAR NUEVO GENERO
     function agregarGenero(){
-        //VERIFICAR OBTENER GENERO A TRAVES DE SELECT
         $this->model->insertarGenero($_POST['inputNombre'], $_POST['inputDescripcion']);
         $this->view->showAdmLocation();
     }
@@ -50,6 +49,4 @@ class GeneroController{
 //         $this->view->showHomeLocation();
 //     }
     
-    
-// 
 }
