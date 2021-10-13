@@ -1,6 +1,6 @@
 <?php
 
-class AuthHelper{
+class authHelper{
 
     function __construct(){
     }
