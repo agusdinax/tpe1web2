@@ -57,6 +57,9 @@ switch ($params[0]) {
     case 'registro':
         $registerController->registrarUsuario();
     break;
+    case 'agregarGenero':
+        $generoController->agregarGenero();
+    break;
 
 //CONTROLAR QUE NO BORRA 
     case 'borrarJuego': 

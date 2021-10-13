@@ -24,7 +24,7 @@ class GeneroView {
     }
     //HOME PARA LOS ADMINISTRADORES
     function showAdmLocation(){
-        header("Location: ".BASE_URL."admin");
+        header("Location: ".BASE_URL."ABMGeneros");
     }
     //VISTA DE LOGIN
     function showLoginLocation(){

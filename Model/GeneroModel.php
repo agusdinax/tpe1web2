@@ -22,7 +22,7 @@ class GeneroModel{
     }
     //SE INSERTA UN NUEVO GENERO Y LO RELACIONA CON LA BASE DE DATOS 
     function insertarGenero($nombre, $descripcion){
-        $sentencia = $this->db->prepare("INSERT INTO genero(id_genero, nombre, descripcion) VALUES(?, ?, ?)");
+        $sentencia = $this->db->prepare("INSERT INTO genero(nombre, descripcion) VALUES (?, ?)");
         $sentencia->execute(array($nombre, $descripcion));
     }
     

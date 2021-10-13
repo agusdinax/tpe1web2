@@ -8,9 +8,8 @@ class JuegosView {
         $this->smarty = new Smarty();
     }
 //VISTA DE JUEGOS PARA LOS NO LOGUEADOS (VISITANTES)
-    function mostrarJuegos($juegos){
+    function mostrarJuegos($juegos,){
         $this->smarty->assign('titulo', 'Lista de juegos');        
-        $this->smarty->assign('juegos', $juegos);
         $this->smarty->display('templates/tabla.tpl');
     }
 //MUESTRA EL JUEGO EN INDIVIDUAL
@@ -32,8 +31,9 @@ class JuegosView {
     }
     
     //muestra el template de la vista admin de la tabla 
-    function mostrarJuegosAdm ($juegos){
+    function mostrarJuegosAdm ($juegos,$generos){
         $this->smarty->assign('juegos',$juegos);
+        $this->smarty->assign('generos', $generos);
         $this->smarty->display('templates/tablaAdmin.tpl');
     }
 }

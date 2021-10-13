@@ -39,17 +39,17 @@
   </div>
 <!--FORM PARA REGISTRAR NUEVA CATEGORIA-->
 <div class="container">
-  <form action="agregarCategoria" method="post">
+  <form action="agregarGenero" method="post">
     <div class="modal-header">
       <h5 class="modal-title">Registrar Nuevo Genero</h5>
     </div>
     <div class="modal-body">
       <div class="form-row">
         <div class="col mb-3">
-          <input class="form-control" placeholder="Nombre del Genero" type="text" name="inputCategoria">
+          <input class="form-control" placeholder="Nombre del Genero" type="text" name="inputNombre">
         </div>
         <div class="col mb-3">
-          <input class="form-control" placeholder="Breve Descripcion del Genero" type="text" name="descripcionGenero">
+          <input class="form-control" placeholder="Breve Descripcion del Genero" type="text" name="inputDescripcion">
         </div>
     <div class="modal-footer">
       <button type="submit" class="btn btn-primary">Crear</button>

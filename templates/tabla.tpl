@@ -57,7 +57,7 @@
       <td>{$juego->precio}</td>
       <td>{$juego->plataforma}</td>
       <td>{$juego->id_genero}</td>
-      <td> <a href="juego/{$juego->id_juego}">ver más</a></td>
+      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">">ver más</a></td>
     </tr>
   {/foreach}
   </tbody>

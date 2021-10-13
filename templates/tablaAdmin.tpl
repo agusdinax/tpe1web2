@@ -69,7 +69,11 @@
       </div>
       <div class="form-row">
         <div class="col-5 mb-3">
-          <input class="form-control" placeholder="Genero del Juego" type="text" name="generoJuego">
+          <select name="generoJuego">
+            {foreach from=$generos item=$genero}
+              <option value={$genero->id_genero}>{$genero->nombre}</option>
+            {/foreach}
+          </select>
         </div>
     <div class="modal-footer">
       <button type="submit" class="btn btn-primary">Crear</button>
@@ -98,9 +102,9 @@
    {foreach from=$juegos item=$juego} 
     <tr id="{$juego->id_juego}">
       <td>{$juego->nombre}</td>
-      <td>{$juego->precio}</td>
+      <td>${$juego->precio}</td>
       <td>{$juego->plataforma}</td>
-      <td>{$juego->id_genero}</td>
+      <td>{$genero->nombre}</td>
       <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">ver más</a></td>
       <td><a href=""class="btn btn-primary">Editar</a></td>
       <td><a href="borrarJuego"class="btn btn-danger">Borrar</a></td>
