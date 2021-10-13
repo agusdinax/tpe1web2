@@ -1,6 +1,6 @@
 <?php
 
-class UserModel{
+class userModel{
 //DEFINIMOS BASE DE DATOS 
     private $db;
     function __construct(){

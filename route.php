@@ -1,8 +1,8 @@
 <?php
-require_once "Controller/LoginController.php";
-require_once "Controller/TablaController.php";
-require_once "Controller/GeneroController.php";
-require_once "Controller/RegisterController.php";
+require_once "Controller/loginController.php";
+require_once "Controller/juegosController.php";
+require_once "Controller/generoController.php";
+require_once "Controller/registerController.php";
 
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -17,10 +17,10 @@ if (!empty($_GET['action'])) {
 
 $params = explode('/', $action);
 
-$tablaController = new TablaController();
-$loginController = new LoginController();
-$generoController = new GeneroController();
-$registerController = new RegisterController();
+$tablaController = new juegosController();
+$loginController = new loginController();
+$generoController = new generoController();
+$registerController = new registerController();
 
 // determina que camino seguir según la acción
 switch ($params[0]) {

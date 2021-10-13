@@ -1,8 +1,8 @@
 <?php
-require_once "./Model/RegisterModel.php";
-require_once "./View/RegisterView.php";
+require_once "./Model/registerModel.php";
+require_once "./View/registerView.php";
 
-class RegisterController {
+class registerController {
     private $model;
     private $view;
 

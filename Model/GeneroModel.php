@@ -1,6 +1,6 @@
 <?php
 
-class GeneroModel{
+class generoModel{
 
     private $db;
     function __construct(){

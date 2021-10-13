@@ -1,6 +1,6 @@
 <?php
 
-class JuegosModel{
+class juegosModel{
 
     private $db;
     function __construct(){

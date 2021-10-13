@@ -1,15 +1,15 @@
 <?php
-require_once "./Model/UserModel.php";
-require_once "./View/LoginView.php";
+require_once "./Model/userModel.php";
+require_once "./View/loginView.php";
 
-class LoginController {
+class loginController {
 
     private $model;
     private $view;
 
     function __construct(){
-        $this->model = new UserModel();
-        $this->view = new LoginView();
+        $this->model = new userModel();
+        $this->view = new loginView();
     }
 
     function logout(){

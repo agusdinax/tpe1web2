@@ -1,9 +1,9 @@
 <?php
-require_once "./Model/JuegosModel.php";
-require_once "./View/JuegosView.php";
-require_once "./Helpers/AuthHelper.php";
+require_once "./Model/juegosModel.php";
+require_once "./View/juegosView.php";
+require_once "./Helpers/authHelper.php";
 
-class TablaController{
+class juegosController{
 
     private $juegosModel;
     private $generoModel;
@@ -11,10 +11,10 @@ class TablaController{
     private $authHelper;
 
     function __construct(){
-        $this->juegosModel = new JuegosModel();
-        $this->generoModel = new GeneroModel();
-        $this->view = new JuegosView();
-        $this->authHelper = new AuthHelper();
+        $this->juegosModel = new juegosModel();
+        $this->generoModel = new generoModel();
+        $this->view = new juegosView();
+        $this->authHelper = new authHelper();
     }
 //muestra la lista de los juegos
     function mostrarJuegos(){

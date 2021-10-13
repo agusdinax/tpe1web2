@@ -1,18 +1,18 @@
 <?php
-require_once "./Model/GeneroModel.php";
-require_once "./View/GeneroView.php";
-require_once "./Helpers/AuthHelper.php";
+require_once "./Model/generoModel.php";
+require_once "./View/generoView.php";
+require_once "./Helpers/authHelper.php";
 
-class GeneroController{
+class generoController{
 
     private $model;
     private $view;
     private $authHelper;
 
     function __construct(){
-        $this->model = new GeneroModel();
-        $this->view = new GeneroView();
-        $this->authHelper = new AuthHelper();
+        $this->model = new generoModel();
+        $this->view = new generoView();
+        $this->authHelper = new authHelper();
     }
 //muestra la lista de todos los generos
     function mostrarGeneros(){
