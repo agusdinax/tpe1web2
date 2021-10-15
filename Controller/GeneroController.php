@@ -35,18 +35,31 @@ class generoController{
         $this->model->insertarGenero($_POST['inputNombre'], $_POST['inputDescripcion']);
         $this->view->showAdmLocation();
     }
-//ELIMINAR GENERO DE LA LISTA -> NO ELIMINA VERIFICAR
-    function eliminarGenero($id){
-        $this->authHelper->checkLoggedIn();
-        $this->model->deleteGeneroFromDB($id);
-        $this->view->showAdmLocation();
-    }
-// //FALTA PODER HACER EL UPDATE 
-//     function updateTask($id){
-//         $this->authHelper->checkLoggedIn();
 
-//         $this->model->updateTaskFromDB($id);
-//         $this->view->showHomeLocation();
+    function deleteGeneroFromDB($id_genero){
+        $sentencia = $this->db->prepare("DELETE FROM genero WHERE id_genero=?");
+        $sentencia->execute(array($id_genero));
+    }
+     
+  //PODER EDITAR LA TABLA
+    function editarGenero($nombre, $descripcion, $id_genero){
+        $sentencia = $this->db->prepare("UPDATE genero SET nombre = ?, descripcion = ? = ? WHERE id_genero=?");
+        $sentencia->execute(array($id_genero));
+    }
+
+
+// //ELIMINAR GENERO DE LA LISTA -> NO ELIMINA VERIFICAR
+//     function eliminarGenero($id){
+//         $this->authHelper->checkLoggedIn();
+//         $this->model->deleteGeneroFromDB($id);
+//         $this->view->showAdmLocation();
 //     }
+// // //FALTA PODER HACER EL UPDATE 
+// //     function updateTask($id){
+// //         $this->authHelper->checkLoggedIn();
+
+// //         $this->model->updateTaskFromDB($id);
+// //         $this->view->showHomeLocation();
+// //     }
     
 }

@@ -27,6 +27,7 @@
             </ul>
         </div>
   </nav>
+
 <!--CARDS PARA ELEGIR ACCIONES-->
 <div class="mt-4 row container">
   <div class="col-sm-5">
@@ -38,16 +39,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-5">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">TABLA JUEGOS</h5>
-        <p class="card-text">Desde aquí como administrador, podrás CREAR NUEVOS GENEROS, EDITAR GENEROS EXISTENTE Y BORRAR GENEROS</p>
-        <a href="#" class="btn btn-primary">Administrar Juegos</a>
-      </div>
-    </div>
-  </div>
-</div>
+ 
 
 <!--FORM PARA REGISTRAR NUEVO JUEGO-->
 <div class="container">
@@ -82,7 +74,6 @@
 </div>
 </div>
 
-
 <!--MUESTRA TABLA CON LA LISTA DE JUEGOS-->
 <div class="container-lg">
 <h2>NUESTROS JUEGOS RECOMENDADOS</h2>
@@ -104,9 +95,13 @@
       <td>{$juego->nombre}</td>
       <td>${$juego->precio}</td>
       <td>{$juego->plataforma}</td>
-      <td>{$genero->nombre}</td>
+      {foreach from=$generos item=$genero}
+        {if $juego->id_genero === $genero->id_genero}
+          <td>{$genero->nombre}</td>
+        {/if}
+      {/foreach}
       <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">ver más</a></td>
-      <td><a href=""class="btn btn-primary">Editar</a></td>
+      <td><a href="edicionJuego/{$juego->id_juego}"class="btn btn-primary">Editar</a></td>
       <td><a href="borrarJuego"class="btn btn-danger">Borrar</a></td>
     </tr>
   {/foreach}

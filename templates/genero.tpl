@@ -9,16 +9,13 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto topnav">
         <li class="nav-item">
-            <a class="nav-link" href="#">Juegos</a>
+            <a class="nav-link" href="home">Juegos</a>
         </li>
          <li class="nav-item">
-            <a class="nav-link" href="#">Generos</a>
+            <a class="nav-link" href="listaGeneros">Generos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link btn btn-success text-white" type="button" href="login" >Registrarse</a>
         </li>
     </ul>
 </div>

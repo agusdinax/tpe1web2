@@ -8,13 +8,16 @@ class juegosView {
         $this->smarty = new Smarty();
     }
 //VISTA DE JUEGOS PARA LOS NO LOGUEADOS (VISITANTES)
-    function mostrarJuegos($juegos,){
-        $this->smarty->assign('titulo', 'Lista de juegos');        
+    function mostrarJuegos($juegos,$generos){
+        $this->smarty->assign('titulo', 'Lista de juegos'); 
+        $this->smarty->assign('juegos', $juegos);
+        $this->smarty->assign('generos', $generos);
         $this->smarty->display('templates/tablaJuegos.tpl');
     }
 //MUESTRA EL JUEGO EN INDIVIDUAL
-    function mostrarJuego($juego){
+    function mostrarJuego($juego,$generos){
         $this->smarty->assign('juego', $juego);
+        $this->smarty->assign('generos', $generos);
         $this->smarty->display('templates/juego.tpl');
      }
 //MUESTRA EL HOME(PARA LOS NO LOGUEADOS)
@@ -35,5 +38,11 @@ class juegosView {
         $this->smarty->assign('juegos',$juegos);
         $this->smarty->assign('generos', $generos);
         $this->smarty->display('templates/tablaAdminJuegos.tpl');
+    }
+
+    function mostrarEditarJuego ($juego, $generos){
+        $this->smarty->assign('juego',$juego);
+        $this->smarty->assign('generos', $generos);
+        $this->smarty->display('templates/editarJuego.tpl');
     }
 }

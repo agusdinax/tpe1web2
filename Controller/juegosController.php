@@ -19,12 +19,14 @@ class juegosController{
 //muestra la lista de los juegos
     function mostrarJuegos(){
         $juegos = $this->juegosModel->obtenerJuegos();
-        $this->view->mostrarJuegos($juegos);
+        $generos = $this->generoModel->obtenerGeneros();
+        $this->view->mostrarJuegos($juegos, $generos);
     }
 //muestra solo un juego 
     function mostrarJuego($id){
         $juego = $this->juegosModel->obtenerJuego($id);
-        $this->view->mostrarJuego($juego);
+        $generos = $this->generoModel->obtenerGeneros();
+        $this->view->mostrarJuego($juego, $generos);
     }
 //MUESTRA LA TABLA DE JUEGOS PARA EL ADMINISTRADOR (CON BOTONES ABM)
     function mostrarJuegosAdm(){
@@ -45,14 +47,17 @@ class juegosController{
         $this->juegosModel->deleteJuegoFromDB($id);
         $this->view->showAdmLocation();
     }
-// //FALTA PODER HACER EL UPDATE 
-//     function updateTask($id){
-//         $this->authHelper->checkLoggedIn();
+//FALTA PODER HACER EL UPDATE 
+    function mostrarEdicion($id){
+        $this->authHelper->checkLoggedIn();
+        $juego= $this->juegosModel->obtenerJuego($id);
+        $generos = $this->generoModel->obtenerGeneros();
+        $this->view-> mostrarEditarJuego($juego,$generos);
+    }
 
-//         $this->juegosModel->updateTaskFromDB($id);
-//         $this->view->showHomeLocation();
-//     }
-    
-    
-// 
+    function editarJuego($id){
+        $this->authHelper->checkLoggedIn();
+        $this->juegosModel->editarJuego($_POST['nombreNuevo'], $_POST['precioNuevo'], $_POST['plataformaNueva'], $_POST['generoNuevo'], $id);
+        $this->view->showAdmLocation();
+    }
 }

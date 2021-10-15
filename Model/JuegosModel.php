@@ -19,6 +19,12 @@ class juegosModel{
         $juego = $sentencia->fetch(PDO::FETCH_OBJ);
         return $juego;
     }
+    function obtenerGenero($id){
+        $sentencia = $this->db->prepare( "select * from juegos WHERE id_genero=?");
+        $sentencia->execute(array($id));
+        $genero = $sentencia->fetch(PDO::FETCH_OBJ);
+        return $genero;
+    }
     //SE INSERTA UN NUEVO JUEGO LO RELACIONA CON LA BASE DE DATOS 
     function insertarJuego($nombre, $precio, $plataforma, $genero){
         $sentencia = $this->db->prepare("INSERT INTO juegos(nombre, precio, plataforma, id_genero) VALUES(?, ?, ?, ?)");
@@ -29,19 +35,12 @@ class juegosModel{
         $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juego=?");
         $sentencia->execute(array($id_juego));
     }
-    
-
-    
+     
   //PODER EDITAR LA TABLA
-    function act_juego($nombre, $precio, $plataforma, $genero, $id_juego)
-    {
-        $sentencia = $this->db->prepare("UPDATE mueble SET nombre = ?, precio = ?, plataforma = ?, genero = ? WHERE id_juego=?");
-        $sentencia->execute(array($id_juego));
+    function editarJuego($nombre, $precio, $plataforma, $genero, $id_juego){
+        $sentencia = $this->db->prepare("UPDATE juegos SET nombre = ?, precio = ?, plataforma = ?, id_genero = ? WHERE id_juego= ?");
+        $sentencia->execute(array($nombre, $precio, $plataforma, $genero, $id_juego));
     }
-    // function updateTaskFromDB($id){
-    //     $sentencia = $this->db->prepare("UPDATE tareas SET finalizada=1 WHERE id_tarea=?");
-    //     $sentencia->execute(array($id));
-    // }
 
     
 }

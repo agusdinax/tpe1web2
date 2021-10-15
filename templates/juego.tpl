@@ -17,9 +17,6 @@
         <li class="nav-item">
             <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link btn btn-success text-white" type="button" href="login" >Registrarse</a>
-        </li>
     </ul>
 </div>
 </nav>
@@ -32,7 +29,12 @@
   <div class="card-body">
     <h5 class="card-title">{$juego->nombre}</h5>
     <p class="card-text">{$juego->plataforma}</p>
-    <a href="#" class="btn btn-primary">{$juego->id_genero}</a>
+    {foreach from=$generos item=$genero}
+        {if $genero->id_genero == $juego->id_genero}
+            <p>Genero: {$genero->nombre}</p>
+        {/if}
+    {/foreach}
+    <a href="home" class="btn btn-primary">Volver a la tabla</a>
   </div>
 
 {include file='templates/footer.tpl'}

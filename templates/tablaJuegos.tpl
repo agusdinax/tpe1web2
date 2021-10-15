@@ -18,13 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success text-white" type="button" href="login" >Registrarse</a>
-                </li>
             </ul>
         </div>
   </nav>
-
 <!-------------SECTION BANNER-MENU------------------>
 <section class="mt-1 pt-4 text-center bg-danger">
   <div class="container-fluid mt-1">
@@ -57,7 +53,7 @@
       <td>{$juego->precio}</td>
       <td>{$juego->plataforma}</td>
       <td>{$juego->id_genero}</td>
-      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">">ver más</a></td>
+      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">ver más</a></td>
     </tr>
   {/foreach}
   </tbody>

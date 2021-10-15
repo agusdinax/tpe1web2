@@ -17,9 +17,6 @@
         <li class="nav-item">
             <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link btn btn-success text-white" type="button" href="login" >Registrarse</a>
-        </li>
     </ul>
 </div>
 </nav>
