@@ -60,6 +60,9 @@ switch ($params[0]) {
     case 'borrarJuego': 
         $juegosController->eliminarJuego($params[1]); 
         break;
+    case 'borrarGenero': 
+        $generoController->eliminarGenero($params[1]); 
+        break;
     case 'edicionJuego': 
         $juegosController->mostrarEdicion($params[1]); 
         break;

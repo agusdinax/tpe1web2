@@ -26,7 +26,7 @@ class generoModel{
         $sentencia->execute(array($nombre, $descripcion));
     }
     
-//NO BORRA XD
+//FUNCION BORRAR
     function deleteGeneroFromDB($id_genero){
         $sentencia = $this->db->prepare("DELETE FROM genero WHERE id_genero=?");
         $sentencia->execute(array($id_genero));
@@ -37,4 +37,4 @@ class generoModel{
     $sentencia->execute(array($nombre, $descripcion, $id_genero));
 }
 
-    }
+}

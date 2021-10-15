@@ -1,6 +1,6 @@
 <?php
 
-class userModel{
+class loginModel{
 //DEFINIMOS BASE DE DATOS 
     private $db;
     function __construct(){

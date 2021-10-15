@@ -1,5 +1,5 @@
 <?php
-require_once "./Model/userModel.php";
+require_once "./Model/loginModel.php";
 require_once "./View/loginView.php";
 
 class loginController {
@@ -8,14 +8,13 @@ class loginController {
     private $view;
 
     function __construct(){
-        $this->model = new userModel();
+        $this->model = new loginModel();
         $this->view = new loginView();
     }
 
     function logout(){
         session_start();
         session_destroy();
-        //no muestra el cartel de deslogueo al salir
         $this->view->mostrarLogin("Te deslogueaste!");
     }
 
@@ -30,8 +29,6 @@ class loginController {
      
             // VIENE EL USUARIO DE LA BASE DE DATOS
             $user = $this->model->obtenerUsuario($email);
-        
-            //FALTA AGREGAR EL HASHEO DEL LOGIN
             if ($user && $user->clave) {
                 session_start();
                 $_SESSION["email"] = $email;

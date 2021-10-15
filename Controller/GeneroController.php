@@ -36,7 +36,7 @@ class generoController{
         $this->view->showAdmLocation();
     }
 
-   //ELIMINAR JUEGO DE LA LISTA -> NO ELIMINA VERIFICAR
+   //ELIMINAR JUEGO DE LA LISTA
    function eliminarGenero($id){
     $this->authHelper->checkLoggedIn();
     $this->juegosModel->deleteGeneroFromDB($id);
