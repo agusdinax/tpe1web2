@@ -54,9 +54,6 @@ switch ($params[0]) {
     case 'ABMGeneros':
         $generoController->mostrarGenerosAdm();
         break;
-    case 'registro':
-        $registerController->registrarUsuario();
-        break;
     case 'agregarGenero':
         $generoController->agregarGenero();
         break;
@@ -68,6 +65,12 @@ switch ($params[0]) {
         break;
     case 'editarJuego':
         $juegosController->editarJuego($params[1]);
+        break;
+    case 'edicionGenero': 
+        $generoController->mostrarEdicionGenero($params[1]); 
+        break;
+    case 'editarGenero':
+        $generoController->editarGenero($params[1]);
         break;
     default: 
         echo('404 Page not found'); 

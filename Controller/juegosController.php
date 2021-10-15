@@ -41,13 +41,13 @@ class juegosController{
         $this->juegosModel->insertarJuego($_POST['inputJuego'], $_POST['precioJuego'], $_POST['plataformaJuego'], $_POST['generoJuego']);
         $this->view->showAdmLocation();
     }
-//ELIMINAR JUEGO DE LA LISTA -> NO ELIMINA VERIFICAR
+//ELIMINAR JUEGO DE LA LISTA
     function eliminarJuego($id){
         $this->authHelper->checkLoggedIn();
-        $this->juegosModel->deleteJuegoFromDB($id);
+        $this->juegosModel->eliminarJuegoDB($id);
         $this->view->showAdmLocation();
     }
-//FALTA PODER HACER EL UPDATE 
+// UPDATE DEL JUEGO 
     function mostrarEdicion($id){
         $this->authHelper->checkLoggedIn();
         $juego= $this->juegosModel->obtenerJuego($id);

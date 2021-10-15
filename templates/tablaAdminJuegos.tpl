@@ -16,10 +16,10 @@
                     <a class="nav-link" href="home">Vista Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="listaGeneros">Generos</a>
+                    <a class="nav-link" href="ABMGeneros">Generos</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Juegos</a>
+                    <a class="nav-link" href="admin">Juegos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-danger text-white" type="button" href="logout" >Logout</a>
@@ -100,9 +100,9 @@
           <td>{$genero->nombre}</td>
         {/if}
       {/foreach}
-      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">ver más</a></td>
+      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">Ver más</a></td>
       <td><a href="edicionJuego/{$juego->id_juego}"class="btn btn-primary">Editar</a></td>
-      <td><a href="borrarJuego"class="btn btn-danger">Borrar</a></td>
+      <td><a href="borrarJuego/{$juego->id_juego}"class="btn btn-danger">Borrar</a></td>
     </tr>
   {/foreach}
   </tbody>

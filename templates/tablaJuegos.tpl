@@ -28,10 +28,20 @@
       <p class="main--txt text-light p-5">👉En nuestra pagina web podras ver un ranking de los mejores juegos del mercado!!
       </br>🛵Tambien podras buscar juegos por genero y elegir el que más te guste!!
 </p>
- <button type="button" href="listaGeneros"class="pb-2 btn btn-dark "><i class="fas fa-motorcycle"></i>Buscar por Genero
-              <i class="fas fa-motorcycle"></i></button>
 </div>
 </section>
+
+<!--CARDS PARA ELEGIR ACCIONES-->
+<div class="mt-4 row container">
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">TABLA GENERO</h5>
+        <p class="card-text">Desde aquí podras buscar tu genero de juego favorito!</p>
+        <a href="listaGeneros" class="btn btn-primary">Ver Generos</a>
+      </div>
+    </div>
+  </div>
 
 <div class="mt-4 container-lg">
 <h2>NUESTROS JUEGOS RECOMENDADOS</h2>
@@ -50,10 +60,14 @@
   {foreach from=$juegos item=$juego} 
     <tr id="{$juego->id_juego}">
       <td>{$juego->nombre}</td>
-      <td>{$juego->precio}</td>
+      <td>${$juego->precio}</td>
       <td>{$juego->plataforma}</td>
-      <td>{$juego->id_genero}</td>
-      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">ver más</a></td>
+      <td>{foreach from=$generos item=$genero}
+        {if $genero->id_genero == $juego->id_genero}
+            <p>{$genero->nombre}</p>
+        {/if}
+    {/foreach}</td>
+      <td> <a href="juego/{$juego->id_juego}" class="btn btn-success">Ver más</a></td>
     </tr>
   {/foreach}
   </tbody>

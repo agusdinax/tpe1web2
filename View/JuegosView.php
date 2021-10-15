@@ -45,4 +45,5 @@ class juegosView {
         $this->smarty->assign('generos', $generos);
         $this->smarty->display('templates/editarJuego.tpl');
     }
+    
 }

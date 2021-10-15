@@ -30,10 +30,10 @@ class juegosModel{
         $sentencia = $this->db->prepare("INSERT INTO juegos(nombre, precio, plataforma, id_genero) VALUES(?, ?, ?, ?)");
         $sentencia->execute(array($nombre, $precio, $plataforma, $genero));
     }
-//NO BORRA XD
-    function deleteJuegoFromDB($id_juego){
-        $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juego=?");
-        $sentencia->execute(array($id_juego));
+//BORRAR
+    function eliminarJuegoDB($id){
+        $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juegos=?");
+        $sentencia->execute(array($id));
     }
      
   //PODER EDITAR LA TABLA

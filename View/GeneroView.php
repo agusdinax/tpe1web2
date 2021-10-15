@@ -36,4 +36,8 @@ class generoView {
         $this->smarty->assign('generos',$generos);
         $this->smarty->display('templates/tablaAdminGeneros.tpl');
     }
+    function mostrarEditarGenero ($genero){
+        $this->smarty->assign('genero', $genero);
+        $this->smarty->display('templates/editarGenero.tpl');
+    }
 }

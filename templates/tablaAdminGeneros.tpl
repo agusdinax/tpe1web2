@@ -15,10 +15,10 @@
             <a class="nav-link" href="home">Vista Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="listaGeneros">Generos</a>
+            <a class="nav-link" href="ABMGeneros">Generos</a>
         </li>
          <li class="nav-item">
-            <a class="nav-link" href="#">Juegos</a>
+            <a class="nav-link" href="admin">Juegos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link btn btn-danger text-white" type="button" href="logout" >Logout</a>
@@ -76,7 +76,7 @@
       <td>{$genero->nombre}</td>
       <td>{$genero->descripcion}</td>
       <td> <a href="genero/{$genero->id_genero}" class="btn btn-success">Ver más</a></td>
-      <td><a href=""class="btn btn-primary">Editar</a></td>
+      <td><a href="edicionGenero/{$genero->id_genero}"class="btn btn-primary">Editar</a></td>
       <td><a href="borrarGenero"class="btn btn-danger">Borrar</a></td>
     </tr>
   {/foreach}

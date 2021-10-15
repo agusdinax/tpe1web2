@@ -9,10 +9,10 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto topnav">
         <li class="nav-item">
-            <a class="nav-link" href="#">Juegos</a>
+            <a class="nav-link" href="home">Juegos</a>
         </li>
          <li class="nav-item">
-            <a class="nav-link" href="#">Generos</a>
+            <a class="nav-link" href="listaGeneros">Generos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link btn btn-primary text-white" type="button" href="login" >Login</a>
@@ -29,6 +29,7 @@
   <div class="card-body">
     <h5 class="card-title">{$juego->nombre}</h5>
     <p class="card-text">{$juego->plataforma}</p>
+    <p class="card-text">${$juego->precio}</p>
     {foreach from=$generos item=$genero}
         {if $genero->id_genero == $juego->id_genero}
             <p>Genero: {$genero->nombre}</p>

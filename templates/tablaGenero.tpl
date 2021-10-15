@@ -37,7 +37,7 @@
     <tr id="{$genero->id_genero}">
       <td>{$genero->nombre}</td>
       <td>{$genero->descripcion}</td>
-      <td> <a href="genero/{$genero->id_genero}" class="btn btn-success">ver más</a></td>
+      <td> <a href="genero/{$genero->id_genero}" class="btn btn-success">Ver más</a></td>
     </tr>
   {/foreach}
   </tbody>
