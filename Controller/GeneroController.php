@@ -36,10 +36,10 @@ class generoController{
         $this->view->showAdmLocation();
     }
 
-   //ELIMINAR JUEGO DE LA LISTA
+//ELIMINAR GENERO DE LA LISTA
    function eliminarGenero($id){
     $this->authHelper->checkLoggedIn();
-    $this->juegosModel->deleteGeneroFromDB($id);
+    $this->model->eliminarGeneroDB($id);
     $this->view->showAdmLocation();
 }
 //FALTA PODER HACER EL UPDATE 

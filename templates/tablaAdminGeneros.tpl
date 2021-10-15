@@ -77,7 +77,7 @@
       <td>{$genero->descripcion}</td>
       <td> <a href="genero/{$genero->id_genero}" class="btn btn-success">Ver más</a></td>
       <td><a href="edicionGenero/{$genero->id_genero}"class="btn btn-primary">Editar</a></td>
-      <td><a href="borrarGenero"class="btn btn-danger">Borrar</a></td>
+      <td><a href="borrarGenero/{$genero->id_genero}"class="btn btn-danger">Borrar</a></td>
     </tr>
   {/foreach}
   </tbody>

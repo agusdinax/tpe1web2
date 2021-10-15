@@ -27,9 +27,9 @@ class generoModel{
     }
     
 //FUNCION BORRAR
-    function deleteGeneroFromDB($id_genero){
+    function eliminarGeneroDB($id){
         $sentencia = $this->db->prepare("DELETE FROM genero WHERE id_genero=?");
-        $sentencia->execute(array($id_genero));
+        $sentencia->execute(array($id));
     }
   //PODER EDITAR LA TABLA
   function editarGenero($nombre, $descripcion, $id_genero){

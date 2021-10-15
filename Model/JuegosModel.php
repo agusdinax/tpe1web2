@@ -32,7 +32,7 @@ class juegosModel{
     }
 //BORRAR
     function eliminarJuegoDB($id){
-        $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juegos=?");
+        $sentencia = $this->db->prepare("DELETE FROM juegos WHERE id_juego=?");
         $sentencia->execute(array($id));
     }
      
