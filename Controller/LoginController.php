@@ -29,7 +29,7 @@ class loginController {
      
             // VIENE EL USUARIO DE LA BASE DE DATOS
             $user = $this->model->obtenerUsuario($email);
-            if ($user && password_verify($clave, $user->clave)){
+            if ($user && $user->clave == $clave){
                 session_start();
                 $_SESSION["email"] = $email;
             //LOGRA ENTRAR Y LO REDIRIGE A LA PAGINA HOME DEL ADMIN 
